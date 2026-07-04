@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "algorithm": "sha-256",
+  "generatedAt": "2026-07-04T08:15:48.350Z",
+  "generatedBy": "chibuenyim@ok.com",
+  "files": {
+    "README.md": {
+      "hash": "d8b8cbbec1ed15a6679650ae561b127dc879340d3b6bb2105fc68d397489cd5e",
+      "size": 6,
+      "modified": "2026-07-04T08:15:48.037Z",
+      "permissions": "100666"
+    },
+    "config.json": {
+      "hash": "9724c1e20e6e3e4d7f57ed25f9d4efb006e508590d528c90da597f6a775c13e5",
+      "size": 16,
+      "modified": "2026-07-04T08:15:48.037Z",
+      "permissions": "100666"
+    },
+    "app.js": {
+      "hash": "b80112c06818d86d16f0185c023439b4364af3c61971b8eaeb90d6f094dc8a6b",
+      "size": 20,
+      "modified": "2026-07-04T08:15:48.036Z",
+      "permissions": "100666"
+    }
+  },
+  "metadata": {
+    "totalFiles": 3,
+    "totalSize": 42,
+    "excludedPatterns": []
+  },
+  "manifestHash": "553793e68c107188230a5a3fc42011fea9b7ec30a99654c977fa2fd9119eab5a"
+}

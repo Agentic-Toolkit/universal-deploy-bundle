@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "algorithm": "sha-256",
+  "generatedAt": "2026-07-04T08:24:12.268Z",
+  "generatedBy": "chibuenyim@ok.com",
+  "files": {
+    "hooks\\pre-push": {
+      "hash": "284bbe22ef6257fd2e2b47e205381a1851761cd2c32bb82c11337a7c76962b5a",
+      "size": 720,
+      "modified": "2026-07-03T12:16:54.000Z",
+      "permissions": "100666"
+    },
+    "hooks\\pre-commit-scan.js": {
+      "hash": "19c5565a50f6821331cc49ab579fe0672f50ebfa627c4a0857e7c5ed6ab97e5a",
+      "size": 17501,
+      "modified": "2026-07-03T12:16:54.000Z",
+      "permissions": "100666"
+    },
+    "hooks\\pre-commit": {
+      "hash": "d5bf6d50f282a703ce9fa6d7805220230081a45180756da7b870bf5c45bd22cd",
+      "size": 1572,
+      "modified": "2026-07-04T07:28:36.822Z",
+      "permissions": "100666"
+    },
+    "hooks\\INSTALL-HOOKS.sh": {
+      "hash": "80994cc1e3fdaa059ddedf6cd48d5be89ab265b20508391fc526fb1ee15e3321",
+      "size": 2434,
+      "modified": "2026-07-03T12:16:54.000Z",
+      "permissions": "100666"
+    },
+    "hooks\\CREDENTIAL-CLEANUP.sh": {
+      "hash": "8cb5682d239799795b0fa37d07b29dd2c5c9e19a99994196bf20e0ed563eaeb8",
+      "size": 6051,
+      "modified": "2026-07-03T12:16:54.000Z",
+      "permissions": "100666"
+    },
+    "package.json": {
+      "hash": "09fcde8cf055232a5446792d400efd2c324d93cf3b4888ad2f107dcbc78512ed",
+      "size": 5867,
+      "modified": "2026-07-04T08:12:22.721Z",
+      "permissions": "100666"
+    },
+    "package-lock.json": {
+      "hash": "8892adbff35f82006c2597f375988d52ba4e8dd04fa39c578d1a39dc85a86e27",
+      "size": 45460,
+      "modified": "2026-07-04T08:12:22.865Z",
+      "permissions": "100666"
+    }
+  },
+  "metadata": {
+    "totalFiles": 7,
+    "totalSize": 79605,
+    "excludedPatterns": [
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/.git/**",
+      "**/*.log",
+      "**/coverage/**",
+      "**/.cache/**",
+      "**/*.tmp",
+      "**/.DS_Store",
+      "**/test-results/**",
+      "**/playwright-report/**",
+      "**/.playwright/**"
+    ]
+  },
+  "manifestHash": "62e662c156436f77a54ad2f81cded93d73bc4e50eeb645ce8229b6c236564ea0"
+}

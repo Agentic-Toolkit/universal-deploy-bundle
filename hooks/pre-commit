@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# V5.3 Pre-Commit Hook
+# Automatically runs code scanner and integrity verification before allowing commit
+# Blocks commits with critical errors (credentials, build errors) or corruption
+
+echo "🔍 Running V5.3 Pre-Commit Checks..."
+
+# Get script directory
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" ) && pwd )"
+PROJECT_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
+
+# Run the code scanner
+echo "   Running code scanner..."
+node "$SCRIPT_DIR/pre-commit-scan.js"
+SCAN_EXIT_CODE=$?
+
+# Run integrity verification (if manifest exists)
+if [ -f "$PROJECT_ROOT/.integrity.json" ]; then
+  echo "   Running integrity verification..."
+  node "$PROJECT_ROOT/core/integrity/CryptographicIntegrityManager.js" verify
+  INTEGRITY_EXIT_CODE=$?
+else
+  echo "   ℹ️  No integrity manifest found. Run: npm run integrity:generate"
+  INTEGRITY_EXIT_CODE=0
+fi
+
+# Check exit codes
+if [ $SCAN_EXIT_CODE -ne 0 ] || [ $INTEGRITY_EXIT_CODE -ne 0 ]; then
+  echo ""
+  echo "❌ Pre-commit verification failed. Commit blocked."
+  echo ""
+
+  if [ $SCAN_EXIT_CODE -ne 0 ]; then
+    echo "   Code scan detected issues."
+  fi
+
+  if [ $INTEGRITY_EXIT_CODE -ne 0 ]; then
+    echo "   Integrity verification detected corruption."
+    echo "   Check: $PROJECT_ROOT/.integrity/handoff.json"
+  fi
+
+  echo ""
+  echo "🔒 The Universal Deployer has detected issues."
+  echo "   Development work required - commit blocked."
+  echo ""
+  echo "To bypass (NOT RECOMMENDED):"
+  echo "  git commit --no-verify"
+  echo ""
+  exit 1
+fi
+
+# Success - allow commit
+echo "✅ Pre-commit checks passed"
+exit 0

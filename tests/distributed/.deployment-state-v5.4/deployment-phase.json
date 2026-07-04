@@ -1,0 +1,11 @@
+{
+  "phase": "build",
+  "completed": [
+    "integrity",
+    "security"
+  ],
+  "pending": [
+    "cni",
+    "deploy"
+  ]
+}
