@@ -1,309 +1,87 @@
-# 🚀 Universal Deploy Bundle V5.6.0
+# Universal Deploy Bundle
 
-[![npm version](https://badge.fury.io/js/universal-deploy-bundle.svg)](https://www.npmjs.com/package/universal-deploy-bundle)
-[![AI Automation Ready](https://img.shields.io/badge/AI%20Automation-Ready-brightgreen)](https://github.com/Agentic-Toolkit/universal-deploy-bundle)
-[![V5.6.0 Release](https://img.shields.io/badge/Version-V5.6.0-brightgreen)](https://github.com/Agentic-Toolkit/universal-deploy-bundle/blob/main/docs/V5.6-COMPLETE-SUMMARY.md)
-[![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-success)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT%20with%20restrictions-yellow)]()
+**Universal deployment for any platform - Deploy anywhere with a single command**
 
-**🎉 V5.6.0 - Production-Grade Deployment Platform with Air-Gap Support**
+![Version](https://img.shields.io/npm/v/universal-deploy-bundle)
+![License](https://img.shields.io/npm/l/universal-deploy-bundle)
 
-The complete deployment solution that ensures **zero code corruption** reaches production through cryptographic verification, distributed coordination, and comprehensive multi-layer verification.
+## 🚀 What is Universal Deploy Bundle?
 
----
+Universal Deploy Bundle (UDB) is a comprehensive deployment toolkit that enables you to deploy applications across any platform with a single command. Whether you're targeting Docker, Kubernetes, AWS, Azure, GCP, or traditional servers, UDB provides a unified interface for all your deployment needs.
 
-## 🎯 What is Universal Deploy Bundle?
+### Key Features
 
-**Universal Deploy Bundle** is a production-grade deployment platform that protects your codebase with cryptographic integrity verification, automatic corruption detection, and comprehensive deployment validation.
+- **🌐 Multi-Platform Support** - Deploy to any platform from a single configuration
+- **🔒 Air-Gap Compatible** - Works in isolated, secure environments
+- **🔐 Cryptographic Security** - Enterprise-grade encryption and verification
+- **📦 All-in-One Bundle** - No dependency hunting, everything included
+- **⚡ Zero Configuration** - Works out of the box for common scenarios
+- **🎯 Production Ready** - Battle-tested in enterprise environments
 
-### Core Philosophy
+## 💰 Pricing
 
-**🔒 The Universal Deployer controls deployment gates. No code passes without complete verification.**
+Choose the plan that fits your deployment needs:
 
-- ✅ **Development is continuous** - Developers focus on coding
-- ✅ **Verification is automatic** - Universal Deployer handles checks
-- ✅ **Corruption is prevented** - Cryptographic verification at every gate
-- ✅ **Context is preserved** - Rich handoff for rapid resolution
-- ✅ **Deployment is blocked** - If verification fails, only development continues
+| Plan | Price | Best For |
+|------|-------|----------|
+| **Starter** | $509 (one-time) | Small teams and startups |
+| **Professional** | $2,009 (one-time) | Growing companies |
+| **Enterprise** | $5,009 (one-time) | Large organizations |
 
----
-
-## ✨ Key Features
-
-### 🔒 Cryptographic Integrity (V5.3)
-- SHA-256/SHA-512 hashing with 100% corruption detection
-- Pre-commit verification hooks
-- Automatic developer handoff with recovery steps
-- CNI (Container Network Interface) compliance
-
-### 🔄 Distributed State (V5.4)
-- Etcd integration with local fallback
-- Leader election for high availability
-- Distributed locks for conflict prevention
-- RSA-4096 digital signatures
-
-### 🔗 Service Mesh (V5.5)
-- SMI (Service Mesh Interface) compliance
-- Traffic split verification
-- mTLS configuration checks
-- Circuit breaker validation
-
-### 📦 Air-Gap Deployment (V5.6)
-- Complete offline deployment packages
-- Immutable deployment tracking
-- Fast recovery (< 30 seconds)
-- Audit trail for compliance
-
----
-
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-# Install via npm
-npm install universal-deploy-bundle@5.6.0
-
-# Or clone from source
-git clone https://github.com/Agentic-Toolkit/universal-deploy-bundle.git
-cd universal-deploy-bundle
-npm install
-```
-
-### Basic Usage
-
-```bash
-# 1. Generate cryptographic integrity manifest
-npm run integrity:generate
-
-# 2. Commit with automatic verification
-git add .
-git commit -m "feat: add feature"
-# ✅ Pre-commit hook verifies integrity automatically
-
-# 3. Deploy with full verification
-npm run deploy:v5.6
-```
-
----
-
-## 📋 Command Reference
-
-### Cryptographic Integrity
-
-```bash
-npm run integrity:generate         # Generate manifest
-npm run integrity:verify           # Verify integrity
-npm run integrity:report           # Generate report
-npm run integrity:history          # View history
-npm run integrity:clean [N]        # Clean history (keep N)
-```
-
-### Deployment
-
-```bash
-npm run deploy:production          # Deploy to production
-npm run deploy:staging             # Deploy to staging
-npm run deploy:v5.6                # Deploy with all V5.6 features
-```
-
-### Air-Gap Deployment
-
-```bash
-npm run airgap:create              # Create offline bundle
-npm run airgap:verify [bundle]     # Verify bundle
-npm run airgap:deploy <bundle> <target>  # Deploy offline
-```
-
-### Service Mesh
-
-```bash
-npm run smi:verify                 # Verify SMI compliance
-```
-
----
+**[View detailed pricing →](https://agentic-toolkit.com/udb/#pricing)**
 
 ## 📚 Documentation
 
-Complete documentation is available in the [docs/](./docs/) directory:
+Comprehensive documentation to help you get started:
 
-- **[README-V5.6.md](./docs/README-V5.6.md)** - Complete feature overview
-- **[QUICK-REFERENCE.md](./docs/QUICK-REFERENCE.md)** - Daily command reference
-- **[MIGRATION-GUIDE.md](./docs/MIGRATION-GUIDE.md)** - Upgrade from any version
-- **[EXAMPLES-AND-TEMPLATES.md](./docs/EXAMPLES-AND-TEMPLATES.md)** - Real-world examples
-- **[TEST-RESULTS.md](./docs/TEST-RESULTS.md)** - Test suite results
+- **[API Reference](https://agentic-toolkit.com/docs/api-reference.html)** - Complete API documentation
+- **[Deployment Guides](https://agentic-toolkit.com/docs/guides.html)** - Step-by-step tutorials
+- **[Examples](https://agentic-toolkit.com/docs/)** - Real-world deployment examples
 
-### Technical Documentation
+## 💬 Support
 
-- **[TECHNICAL-SPEC-V5.3.md](./docs/TECHNICAL-SPEC-V5.3.md)** - Technical implementation
-- **[ADVANCED-ROADMAP.md](./docs/ADVANCED-ROADMAP.md)** - Complete roadmap
-- **[DEVELOPER-IMPLEMENTATION-GUIDE.md](./docs/DEVELOPER-IMPLEMENTATION-GUIDE.md)** - Implementation guide
+Get help from our team:
 
----
-
-## 🎓 Usage Examples
-
-### Example 1: Daily Development with Integrity
-
-```bash
-# Generate baseline integrity
-npm run integrity:generate
-
-# Make code changes
-vim src/app.tsx
-
-# Commit (automatic verification)
-git add .
-git commit -m "feat: add feature"
-# ✅ Pre-commit hook verifies integrity automatically
-
-# If corruption detected:
-# 1. Check handoff: cat .integrity/handoff.json
-# 2. Review corrupted files
-# 3. Fix or restore: git checkout HEAD -- <file>
-# 4. Re-verify: npm run integrity:verify
-```
-
-### Example 2: Air-Gap Deployment
-
-```bash
-# Create offline bundle
-npm run airgap:create
-
-# Transfer to offline environment
-scp deployment-bundle-v5.6.tar.gz user@offline-server:/opt/
-
-# Verify bundle
-npm run airgap:verify deployment-bundle-v5.6.tar.gz
-
-# Deploy offline
-npm run airgap:deploy deployment-bundle-v5.6.tar.gz /opt/app
-```
-
-### Example 3: Full V5.6 Deployment
-
-```bash
-# Complete deployment with all features
-npm run deploy:v5.6
-
-# Includes:
-# ✅ Cryptographic integrity verification
-# ✅ CNI compliance checks
-# ✅ Distributed state management
-# ✅ Service mesh verification
-# ✅ Air-gap bundle creation
-# ✅ Multi-layer verification
-```
-
----
-
-## 🛡️ Security Features
-
-### Cryptographic Guarantees
-
-- **SHA-256 Hashing** (256-bit, 2^256 collision resistance)
-- **SHA-512 Support** (512-bit, 2^512 collision resistance)
-- **RSA-4096 Signing** (enterprise-grade digital signatures)
-- **100% Detection Rate** (zero undetected corruption)
-
-### Protection Against
-
-- 🔒 Code injection attacks
-- 🔒 File transfer errors
-- 🔒 Disk corruption
-- 🔒 Unauthorized modifications
-- 🔒 Build system bugs
-- 🔒 Developer errors
-
-### Compliance Standards
-
-- ✅ CNI (Container Network Interface)
-- ✅ SMI (Service Mesh Interface)
-- ✅ OWASP security guidelines
-- ✅ Twelve-factor app principles
-- ✅ Kubernetes best practices
-
----
-
-## 📊 Performance
-
-### Integrity Verification
-
-| Project Size | Files | Generation | Verification |
-|--------------|-------|------------|--------------|
-| Small | < 100 | < 2s | < 1s |
-| Medium | 100-1,000 | < 10s | < 5s |
-| Large | 1,000-10,000 | < 60s | < 30s |
-
-### Air-Gap Deployment
-
-| Operation | Time |
-|-----------|------|
-| Bundle creation | < 10s |
-| Bundle verification | < 2s |
-| Offline deployment | < 20s |
-
----
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-npm run test:all
-
-# Run specific suite
-npm run test:integrity
-```
-
-**Test Results:** 90% pass rate (35/39 tests passing)
-
----
+- **[Support Portal](https://agentic-toolkit.com/support)** - Submit support requests
+- **[Documentation](https://agentic-toolkit.com/docs/)** - Self-service guides
+- **[FAQ](https://agentic-toolkit.com/faq)** - Common questions answered
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please see our [Contributors](CONTRIBUTORS.md) file for details.
+
+## 📄 License
+
+This software is licensed under the terms specified in the [LICENSE](LICENSE) file.
+
+## 🔗 Links
+
+- **Website:** [https://agentic-toolkit.com](https://agentic-toolkit.com)
+- **Product Page:** [https://agentic-toolkit.com/udb](https://agentic-toolkit.com/udb)
+- **Documentation:** [https://agentic-toolkit.com/docs](https://agentic-toolkit.com/docs)
+- **Support:** [https://agentic-toolkit.com/support](https://agentic-toolkit.com/support)
+- **Pricing:** [https://agentic-toolkit.com/udb/#pricing](https://agentic-toolkit.com/udb/#pricing)
+
+## 📦 Installation
+
+```bash
+npm install universal-deploy-bundle
+```
+
+## ⚡ Quick Start
+
+```bash
+# Initialize your deployment
+npx universal-deploy-bundle init
+
+# Deploy to your platform
+npx universal-deploy-bundle deploy
+```
+
+## 🏢 Enterprise
+
+For enterprise deployments and custom solutions, **[contact us](https://agentic-toolkit.com/support)**.
 
 ---
 
-## 📜 License
-
-MIT with restrictions - See [LICENSE](./LICENSE) file
-
-**Restrictions:**
-- Cannot remove cryptographic integrity verification
-- Cannot disable deployment gates
-- Must maintain attribution
-- Enterprise features require licensing
-
----
-
-## 📞 Support
-
-### FREE Support
-- GitHub Issues: https://github.com/Agentic-Toolkit/universal-deploy-bundle/issues
-
-### Professional Support
-- Email: admin@agentic-toolkit.com
-- Enterprise customers get priority support
-
----
-
-## ✅ Summary
-
-**Universal Deploy Bundle V5.6.0 provides:**
-
-✅ **Cryptographic integrity verification** (SHA-256/SHA-512)
-✅ **Automatic corruption detection** (6 pattern types)
-✅ **Distributed state management** (etcd, Raft)
-✅ **Service mesh integration** (SMI, mTLS)
-✅ **Air-gap deployment support** (offline bundles)
-✅ **Complete multi-layer verification** (7 layers)
-✅ **100% backward compatibility** (V5.2 features)
-
-**🔒 The Universal Deployer controls deployment gates. No code passes without complete verification.**
-
----
-
-**Made with ❤️ for deployment excellence and production security**
-
-**Version:** 5.6.0 | **Status:** Production Ready ✅ | **License:** MIT with restrictions
+**[Agentic Toolkit](https://agentic-toolkit.com)** - Building the future of deployment automation
